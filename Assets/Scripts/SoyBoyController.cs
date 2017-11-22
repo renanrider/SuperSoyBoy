@@ -25,7 +25,6 @@ using System.Collections;
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Animator))]
 public class SoyBoyController : MonoBehaviour {
-
     public float speed = 14f;
     public float accel = 6f;
     private Vector2 input;
@@ -55,11 +54,6 @@ public class SoyBoyController : MonoBehaviour {
         height = GetComponent<Collider2D>().bounds.extents.y + 0.2f;
         audioSource = GetComponent<AudioSource>();
     }
-
-    // Use this for initialization
-    void Start () {
-	
-	}
 
     void PlayAudioClip(AudioClip clip)
     {

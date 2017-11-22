@@ -24,7 +24,6 @@ using UnityEngine;
 using System.Collections;
 
 public class Hazard : MonoBehaviour {
-
     public GameObject playerDeathPrefab;
     public AudioClip deathClip;
     public Sprite hitSprite;
@@ -34,11 +33,6 @@ public class Hazard : MonoBehaviour {
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
-    // Use this for initialization
-    void Start () {
-	
-	}
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -56,9 +50,4 @@ public class Hazard : MonoBehaviour {
             GameManager.instance.RestartLevel(1.25f);
         }
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 }

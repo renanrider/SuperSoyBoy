@@ -32,7 +32,6 @@ public class CameraLerpToTransform : MonoBehaviour {
     public float minY;
     public float maxX;
     public float maxY;
-
     void FixedUpdate()
     {
         if (camTarget != null)

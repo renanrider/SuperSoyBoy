@@ -41,7 +41,6 @@ public class LevelEditor : Editor {
 				// 7
 				levelItems.Add (li);
 			}
-
 			// 8
 			ldr.levelItems = levelItems.ToArray ();
 			ldr.playerStartPosition =
@@ -59,6 +58,12 @@ public class LevelEditor : Editor {
 						trackingSpeed = currentCamSettings.trackingSpeed
 				};
 			}
+			
+			var levelDataToJson = JsonUtility.ToJson (ldr);
+			var savePath = System.IO.Path.Combine (Application.dataPath,
+				level.levelName + ".json");
+			System.IO.File.WriteAllText (savePath, levelDataToJson);
+			Debug.Log ("Level saved to " + savePath);
 		}
 	}
 }

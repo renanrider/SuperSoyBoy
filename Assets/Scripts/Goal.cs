@@ -24,9 +24,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Goal : MonoBehaviour {
-
-    public AudioClip goalClip;
-
+    public AudioClip goalClip;    
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
